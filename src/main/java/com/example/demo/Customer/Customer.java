@@ -1,14 +1,29 @@
 package com.example.demo.Customer;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Customer {
+    @Id
+    @SequenceGenerator(name = "customer_sequence",
+    sequenceName = "customer_sequence",
+    allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+    generator = "customer_sequance")
+    private Long id;
     private String name;
     private int phonenumber;
     private String country;
     private String address;
     private String email;
 
+    public Customer() {
+    }
+
     public Customer(String name, int phonenumber, String country, String address, String email) {
         this.name = name;
+        this.id = id;
         this.phonenumber = phonenumber;
         this.country = country;
         this.address = address;
