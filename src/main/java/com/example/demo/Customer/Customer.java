@@ -1,6 +1,9 @@
 package com.example.demo.Customer;
 
+
+
 import javax.persistence.*;
+import java.math.BigInteger;
 
 @Entity
 @Table
@@ -13,7 +16,7 @@ public class Customer {
     generator = "customer_sequance")
     private Long id;
     private String name;
-    private int phonenumber;
+    private BigInteger phonenumber;
     private String country;
     private String address;
     private String email;
@@ -21,13 +24,16 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String name, int phonenumber, String country, String address, String email) {
+    public Customer( String name,Long phonenumber, String country, String address, String email) {
         this.name = name;
         this.id = id;
-        this.phonenumber = phonenumber;
+        this.phonenumber = BigInteger.valueOf(phonenumber);
         this.country = country;
         this.address = address;
         this.email = email;
+    }
+
+    public Customer(String name, BigInteger phonenumber, String country, String address, String email) {
     }
 
     public String getName() {
@@ -38,12 +44,12 @@ public class Customer {
         this.name = name;
     }
 
-    public int getPhonenumber() {
+    public BigInteger getPhonenumber() {
         return phonenumber;
     }
 
-    public void setPhonenumber(int phonenumber) {
-        this.phonenumber = phonenumber;
+    public void setPhonenumber(Long phonenumber) {
+        this.phonenumber = BigInteger.valueOf(phonenumber);
     }
 
     public String getCountry() {

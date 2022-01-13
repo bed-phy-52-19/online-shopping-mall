@@ -1,19 +1,22 @@
 package com.example.demo.Customer;
 
+import java.math.BigInteger;
+
 public class CustomerBuilder {
     private String name;
-    private int phonenumber;
+    private BigInteger phonenumber;
     private String country;
     private String address;
     private String email;
+
 
     public CustomerBuilder setName(String name) {
         this.name = name;
         return this;
     }
 
-    public CustomerBuilder setPhonenumber(int phonenumber) {
-        this.phonenumber = phonenumber;
+    public CustomerBuilder setPhonenumber(Long phonenumber) {
+        this.phonenumber = BigInteger.valueOf(phonenumber);
         return this;
     }
 
@@ -33,6 +36,6 @@ public class CustomerBuilder {
     }
 
     public Customer createCustomer() {
-        return new Customer(name, phonenumber, country, address, email);
+        return new Customer(name,  phonenumber, country, address, email);
     }
 }
