@@ -17,23 +17,23 @@ public class Customer {
     private Long id;
     private String name;
     private BigInteger phonenumber;
-    private String country;
+    private String Products;
     private String address;
     private String email;
 
     public Customer() {
     }
 
-    public Customer( String name,Long phonenumber, String country, String address, String email) {
+    public Customer( String name,Long phonenumber, String Products, String address, String email) {
         this.name = name;
         this.id = id;
         this.phonenumber = BigInteger.valueOf(phonenumber);
-        this.country = country;
+        this.Products = Products;
         this.address = address;
         this.email = email;
     }
 
-    public Customer(String name, BigInteger phonenumber, String country, String address, String email) {
+    public Customer(String name, BigInteger phonenumber, String Products, String address, String email) {
     }
 
     public String getName() {
@@ -52,12 +52,12 @@ public class Customer {
         this.phonenumber = BigInteger.valueOf(phonenumber);
     }
 
-    public String getCountry() {
-        return country;
+    public String getProducts() {
+        return Products;
     }
 
     public void setCountry(String country) {
-        this.country = country;
+        this.Products = Products;
     }
 
     public String getAddress() {
@@ -81,7 +81,7 @@ public class Customer {
         return "Customer{" +
                 "name='" + name + '\'' +
                 ", phonenumber=" + phonenumber +
-                ", country='" + country + '\'' +
+                ", country='" + Products + '\'' +
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 '}';

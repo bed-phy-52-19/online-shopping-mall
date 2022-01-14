@@ -22,13 +22,14 @@ public class CustomerController {
     }
     @PostMapping
     public void registerNewCustomer(@RequestBody Customer customer){
-     customerService.addNewCustomer(customer);
+
+        customerService.addNewCustomer(customer);
     }
     @DeleteMapping(path="{customerId}")
     public void deleteCustomer(@PathVariable("customerId") Long customerId){
       customerService.deleteCustomer(customerId);
     }
-    @PutMapping( path =" {customerId}")
+    @PutMapping( path ="{customerId}")
     public void updateCustomer(@PathVariable("customerId") Long customerId,
                               @RequestParam( required = false) String name,
                               @RequestParam(required = false) String email){

@@ -12,8 +12,8 @@ public class CustomerConfig {
     @Bean
     CommandLineRunner commandLineRunner(CustomerRepository repository){
         return args -> {
-        Customer chisomo = new Customer ("chisomo", (long) 1233322323, "malawi", "mbayan", "@cc.ac.mw");
-            Customer mphatso =new Customer ("chisomo", 88372811111L, "malawi", "mbayan", "@cc.ac.mw");
+        Customer chisomo = new Customer ("chisomo", (long) 1233322323, "clothes", "mbayan", "@cc.ac.mw");
+            Customer mphatso =new Customer ("chisomo", 88372811111L, "shoes", "mbayan", "@cc.ac.mw");
             repository.saveAll(List.of(chisomo,mphatso));
         };
     }

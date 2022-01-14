@@ -37,7 +37,8 @@ public class CustomerService {
         }
         customerRepository.deleteById(customerId);
     }
-  @Transactional
+    @Transactional
+  
     public void updateCustomer(Long customerId, String name, String email) {
         Customer customer =customerRepository.findById(customerId)
                 .orElseThrow(() -> new IllegalStateException(
