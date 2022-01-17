@@ -19,7 +19,7 @@ public class CustomerConfig {
         return args -> {
         Customer chisomo = new Customer ("chisomo", (long) 1233322323, "clothes", "mbayan", "@cc.ac.mw");
             Customer mphatso =new Customer ("chisomo", 88372811111L, "shoes", "mbayan", "@cc.ac.mw");
-            repository.saveAll(List.of(chisomo,mphatso));
+            repository.toString();
         };
         }
     }
