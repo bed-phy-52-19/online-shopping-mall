@@ -3,6 +3,7 @@ package com.example.demo.Employee;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -15,6 +16,7 @@ import java.util.List;
 public class EmployeeConfig {
 
     private EmployeeRepository repository;
+
     @Bean
     CommandLineRunner command(EmployeeRepository repository){
         return args -> {
