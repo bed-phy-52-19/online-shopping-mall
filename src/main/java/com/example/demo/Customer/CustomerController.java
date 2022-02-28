@@ -15,12 +15,12 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @GetMapping
+    @GetMapping(path="cust")
    public List<Customer> getCustomer(){
         return customerService.getCustomer();
 
     }
-    @PostMapping
+    @PostMapping(path="cust")
     public void registerNewCustomer(@RequestBody Customer customer){
 
         customerService.addNewCustomer(customer);

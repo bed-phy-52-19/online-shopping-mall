@@ -5,7 +5,7 @@ import java.math.BigInteger;
 public class CustomerBuilder {
     private String name;
     private BigInteger phonenumber;
-    private String Products;
+    private String products;
     private String address;
     private String email;
 
@@ -20,8 +20,8 @@ public class CustomerBuilder {
         return this;
     }
 
-    public CustomerBuilder setProducts(String Products) {
-        this.Products = Products;
+    public CustomerBuilder setProducts(String products) {
+        this.products = products;
         return this;
     }
 
@@ -36,6 +36,6 @@ public class CustomerBuilder {
     }
 
     public Customer createCustomer() {
-        return new Customer(name,  phonenumber, Products, address, email);
+        return new Customer(name,  phonenumber, products, address, email);
     }
 }
